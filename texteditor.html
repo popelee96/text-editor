@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>BLOG</title>
+    <link rel="stylesheet" type="text/css" href="texteditor.css"/>
+</head>
+<body>
+    <header>        
+        <h1>TEXT EDITOR</h1>
+    </header>
+    <nav>
+        <a href=#>READ</a>
+        <a href=#>WRITE</a>
+    </nav>
+    <section>
+        <div id="textEditor">
+            <div id="editor">
+                <button class="button" type="button" title="Clean" onclick="if(confirm('Are you sure?')) { oDoc.innerHTML = sDefTxt; }">A</button>
+                <button class="button" type="button" title="Undo" onclick="editText('undo');">A</button>
+                <button class="button" type="button" title="Redo" onclick="editText('redo');">A</button>
+                <button class="button" type="button" title="Remove formatting" onclick="editText('removeFormat');">A</button>
+                <button class="button" type="button" title="Bold" onclick="editText('bold');">A</button>
+                <button class="button" type="button" title="Italic" onclick="editText('italic');">A</button>
+                <button class="button" type="button" title="Underline" onclick="editText('underline');">A</button>
+                <button class="button" type="button" title="Left align" onclick="editText('justifyleft');">A</button>
+                <button class="button" type="button" title="Center align" onclick="editText('justifycenter');">A</button>
+                <button class="button" type="button" title="Right align" onclick="editText('justifyright');">A</button>
+                <button class="button" type="button" title="Numbered list" onclick="editText('insertorderedlist');">A</button>
+                <button class="button" type="button" title="Dotted list" onclick="editText('insertunorderedlist');">A</button>
+                <button class="button" type="button" title="Quote" onclick="editText('formatblock','blockquote');">A</button>
+                <button class="button" type="button" title="Delete indentation" onclick="editText('outdent');">A</button>
+                <button class="button" type="button" title="Add indentation" onclick="editText('indent');">A</button>
+                <button class="button" type="button" title="Hyper indentation" onclick="alert('Not Yet')";>A</button>
+                <button class="button" type="button" title="Cut" onclick="editText('cut');">A</button>
+                <button class="button" type="button" title="Copy" onclick="editText('copy');">A</button>
+                <button class="button" type="button" title="Paste" onclick="editText('paste');">A</button>
+            </div>
+            <div id="text" contenteditable="true"></div>
+        </div>
+    </section>
+    <script type="text/javascript" src="texteditor.js"></script>
+</body>
+</html>
